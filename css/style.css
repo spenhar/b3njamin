@@ -264,13 +264,11 @@ img {
   overflow: hidden;
   visibility: hidden;
   position: relative; }
-  .swipe img {
-    width: 100vw; }
-    @media (max-width: 1000px) {
-      .swipe img {
-        height: 100vh;
-        width: auto;
-        left: -50%; } }
+  .swipe .bg-img {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: 50% 50%; }
 
 .swipe-wrap {
   overflow: hidden;
@@ -333,6 +331,9 @@ button {
   -moz-transition-delay: 0s; }
   #back:hover, #next:hover {
     opacity: 1; }
+  @media (max-width: 1000px) {
+    #back, #next {
+      display: none; } }
 
 #next {
   right: 0;

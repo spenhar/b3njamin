@@ -83,7 +83,8 @@ $(document).click(function() {
 var elem = document.getElementById('slider');
 window.mySwipe = Swipe(elem, {
   startSlide: Math.random()*14,
-  speed: 1400,
+  // startSlide: 0,
+  speed: 400,
   auto: 4000,
   continuous: true,
   // disableScroll: true,

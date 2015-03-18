@@ -347,14 +347,20 @@ img {
   overflow: hidden;
   visibility: hidden;
   position: relative;
-  img {
+  .bg-img {
+    height: 100vh;
     width: 100vw;
-    @media (max-width: 1000px) {
-      height: 100vh;
-      width: auto;
-      left: -50%;
-    }
+    background-size: cover;
+    background-position:50% 50%;
   }
+  // img {
+  //   width: 100vw;
+  //   @media (max-width: 1000px) {
+  //     height: 100vh;
+  //     width: auto;
+  //     left: -50%;
+  //   }
+  // }
 }
 .swipe-wrap {
   overflow: hidden;
@@ -449,6 +455,9 @@ button {
   &:hover {
     opacity: 1;
     // font-size: 1em;
+  }
+  @media (max-width: 1000px) {
+    display: none;
   }
 
 }
