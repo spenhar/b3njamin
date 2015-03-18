@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+
+@mixin transition($duration,$ease:$linear,$prop:all,$delay:0)
+{
+  -webkit-transition: $prop $duration $delay $ease;
+  -moz-transition: $prop $duration $delay $ease;
+  -o-transition: $prop $duration $delay $ease;
+  -ms-transition: $prop $duration $delay $ease;
+  transition: $prop $duration $delay $ease;
+
+  -moz-transition-duration: $duration;
+  -moz-transition-property:$prop;
+  -moz-transition-delay:$delay;
+}
+@mixin rounded($radius)
+{
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-sizing{
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin opacity($alpha)
+{
+  opacity: $alpha;
+  -moz-opacity: $alpha;
+  filter:alpha(opacity=$alpha);
+}
+@mixin centerH{
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+@mixin centerV{
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+@mixin transform($transform)
+{
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+// REMOVE IF THERE IS NO 3D
+@mixin transform-origin($transformOrigin)
+{
+  -webkit-transform-origin:$transformOrigin;
+  -moz-transform-origin:$transformOrigin;
+}
+@mixin perspective-origin($perspective)
+{
+  -webkit-perspective-origin:$perspective;
+  -moz-perspective-origin:$perspective;
+  -o-perspective-origin:$perspective;
+  perspective-origin:$perspective;
+}
+@mixin preserve3d{
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+@mixin hideBackface{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@mixin showBackface{
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+@mixin filter($filter-type,$filter-amount) { 
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+// Center-align a block level element - Quickly center any element within its parent. 
+// Requires width or max-width to be set.
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+// END REMOVE IF THERE IS NO 3D
+
+@mixin headline-font($size)
+{
+  font-size: $size;
+  font-family: $headline-font;
+}
+$headline-font: 'Helvetica', sans-serif;
+@mixin body-font($size)
+{
+  font-size: $size;
+  font-family: 'museo-slab', 'Georgia', serif;
+}
+
+$bgColor: #eee;
+$darkColor: #222;
+$darkColor95: rgba(6, 6, 6, .95);
+$darkColor20: rgba(6, 6, 6, .20);
+$darkColor50: rgba(6, 6, 6, .50);
+$darkColor85: rgba(6, 6, 6, .85);
+$highlightColor: red;
+$lightColor: #dedede;
+$lightColor50: rgba(223, 236, 230, .50);
+$lightColor20: rgba(223, 236, 230, .20);
+$borderColor: #494547;
+$yellow: rgba(255, 227, 63, 1);
+$yellow25: rgba(255, 227, 63, .25);
+$yellow50: rgba(255, 227, 63, .5);
+$yellow75: rgba(255, 227, 63, .75);
+
+
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+*{
+  @include box-sizing;
+}
+html { font-size: 100%; width: 100%; height:100%; background:$bgColor; -webkit-font-smoothing:antialiased;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-rendering:optimizeLegibility}
+html, button, input, select, textarea { @include body-font(1em); color: #222; }
+body { overflow-y: scroll; margin: 0; width: 100%; height:100%; font-size: 1em; line-height: 1.4; @include body-font(16px);
+}
+
+a { color: $lightColor50; 
+  text-decoration:none; 
+  font-size: .6em; 
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  line-height: 3em;
+  // font-family: $headline-font;
+}
+
+a:visited {}
+a:hover {}
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 0 0; padding: 0 0 0 0; }
+li {display: block;}
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { 
+  border: 0; -ms-interpolation-mode: bicubic; 
+  // vertical-align: middle; 
+}
+
+/* ===== Primary Styles ========================================================
+   Author: Nick Jones / The Experiment
+   ========================================================================== */
+
+
+
+// Works for now - but smashes things in portrait mode. 
+.background {
+  // VR - tree_corridor, 
+  // HZ - Mideau_2, gold_2, smoke_mouth, off_shoulder,
+  background-image: "/img/Mideau_2.jpg";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  
+  img{
+        /* Set rules to fill background */
+    min-height: 100%;
+    // min-width: 1024px;
+  
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+  
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    // width: 100%;
+    // height: auto;
+
+
+  // background-repeat: no-repeat;
+    overflow: auto;
+
+  }
+
+}
+
+
+// WHEN I TOOK position fixed off - it worked. 
+.logo {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  margin: 3%;
+  opacity: .5;
+
+  cursor: pointer;
+
+  &.active {
+    opacity:1;
+  }
+  &:hover {
+  opacity: 1;
+  }
+  img {
+    width: 140px;
+    @include center-block;
+    // WHICH ADDS --- 
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    &:hover{
+      // width: 200px;
+    }
+  }
+  
+  @include transition(.4s, ease-out, all, .1s);
+  @media (max-width: 1000px) {
+    position: relative;
+    padding: 10%;
+
+    img {
+      max-height: 80px;
+      width: auto;
+    }
+
+   
+
+  }
+}
+
+
+
+.nav-list {
+  z-index: 0;
+  position: fixed;
+  // Pushes the Nav list down
+  // top: 33%;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  right: -20%;
+  text-align: right;
+  padding-top: 38%;
+  padding-right: 2%;
+  @include transition(.2s, ease-out, all, 0s);
+  background:$darkColor85;
+  
+  &.active {
+    right: 0%;
+  }
+  
+  a { 
+    line-height: 4em;
+    @include transition(.4s, ease-out, all, 0s); }
+  a:hover { 
+    color:  $lightColor;
+    letter-spacing: .54em;
+
+  }
+
+  @media (max-width: 1000px) {
+    position: fixed;
+    top:0;
+    // width: 50%;
+    height: 100%;
+    overflow: hidden;
+    right: -100%;
+    text-align: left;
+    padding: 50% 25%;
+    // padding-left: 15%;
+    width: 100%;
+
+
+     &.active {
+    right: 0%;
+    }
+
+    a { 
+      font-size: .7em;
+      line-height: 4em;
+    }
+
+  }
+}
+
+
+
+.photo{
+  // position: absolute;
+  // top: 0;
+  // left: 100%;
+}
+
+
+.photos{
+
+  
+}
+
+
+.passed {
+  left: -100%;
+}
+
+
+
+
+
+
+
+header{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid $darkColor;
+}
+h1,h2,h3,h4,h5{
+  font-family: $headline-font;
+}
+h1{
+  font-size: 4em;
+ 
+}
+h2{
+ font-size: 6em; 
+}
+h3{
+  font-size: 4em;
+}
+
+footer{
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+  // height: 100px;
+  // border: 1px solid $darkColor;
+}
+
+#back, #next {
+  border-bottom: solid 2px $lightColor;
+  position: fixed;
+  bottom: 0;
+  opacity: .5;
+  @include transition(.2s, ease-out, all, 0s);
+
+  &:hover {
+    opacity: 1;
+    font-size: .65em;
+  }
+}
+
+#next {
+  right: 0;
+  padding:20px 30px 20px 0px;
+}
+
+#back {
+  left: 0;
+  padding:20px 0px 20px 30px;
+}
+
+
+
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }

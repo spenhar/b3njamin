@@ -1,0 +1,186 @@
+/**
+* CSS
+* 
+* @version 1.0
+* @author Colinflower
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+.typekit-badge {
+	display:none !important;
+}
+
+body {
+	font-family: "adobe-caslon-pro", georgia, serif;
+	font-weight: 400;
+	font-style: normal;
+	background: #fff;
+	font-size: 14px;
+}
+
+body.section-1 { }
+body.section-2 { }
+body.section-3 { }
+
+/*
+a:link { 
+	text-decoration: none; 
+	color: #11111;
+}
+
+a:visited { 
+	text-decoration: none; color: #565656; 
+}
+
+
+a:hover {
+	text-decoration: none;
+	background-color: #ffffff;
+}
+
+a img { border: none; }
+*/
+
+#menu {
+    width: 242px;
+    top: 0;
+    bottom: 0;
+	right: 0;
+    position: fixed;
+}
+
+#menu a {
+	font-family: "adobe-caslon-pro", Georgia, serif;
+	font-weight: 400;
+	padding: 4px 5px 0 4px;
+	font-size: 16px;
+	color: #111111;
+	text-decoration: none;
+}
+
+#menu ul {
+	list-style: none;
+	margin: 0 0 12px 0;
+}
+
+#menu li {
+	height: 20px;
+	padding-bottom: 7px;
+}
+
+#menu ul li.section-title { 
+	margin: 20px;
+}
+
+a {
+	font-family: "adobe-caslon-pro", Georgia, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+}
+
+a.logo {
+	background: url(http://westoncolton.com/images/weston_logo_gray.png) no-repeat 0 0 ;
+	display:block;
+	width: 247px;
+	height: 22px;
+	margin: 30px 0 30px 0;
+}
+
+li a:hover {
+	background-color: #ffffff;
+}
+
+.active a { 
+	background-color: #ffffff;
+	font-style: italic;
+}
+
+#the-background {
+	position: fixed;
+	overflow: hidden;
+	z-index:1;
+	width: 100%;
+	height:100%;
+	top:0;
+	left:0;
+}
+
+#wrapper { 
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left:0;
+}
+
+.logo h1 {
+	width: 24px;
+	height: 44px;
+	text-indent: -9999px;
+}
+
+#content {
+    margin: 0 -5px 0 0;
+    top: 0;
+}
+
+.container {
+    padding: 0;
+}
+
+#content p { 
+	width: 400px; 
+	/* margin-bottom: 9px;  */
+}
+
+p {
+    margin: 0 0 9px 0;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 16px; }
+h4 { font-size: 12px; }
+
+
+#img-container	{ 
+	margin: 0 245px 0 0; 
+	padding-top: 60px !important; 
+}
+
+#img-container p { 
+	width: 400px; 
+	margin: 0; 
+/* 	padding: 0 0 12px 0; */
+}
+
+#img-container .captioning .caption {
+	color: #2D2D2D;
+	padding-left: 2px;
+	padding-right: 1px;
+	float: right;
+	font-family: "adobe-caslon-pro", Georgia, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+#once { 
+	clear: left; 
+}
