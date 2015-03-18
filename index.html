@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimal-ui">
     <!--Scripts-->
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="php/getimages.php"></script>
+    <!-- <script src="php/getimages.php"></script> -->
 
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -18,10 +18,28 @@
 </head>
 <body>
 
-  <div class="background">
- 
-    <img src="img/off_shoulder.jpg" id="img1">
-    <!-- <img src="img/smoke_mouth.jpg" id="img2"> -->
+<!--   <div class="background">
+    <img src="img/0.jpg" id="img1">
+  </div> -->
+
+  <div id='slider' class='swipe'>
+    <div class='swipe-wrap'>
+      <div><img src="img/0.jpg" alt=""></div>
+      <div><img src="img/1.jpg" alt=""></div>
+      <div><img src="img/2.jpg" alt=""></div>
+      <div><img src="img/3.jpg" alt=""></div>
+      <div><img src="img/4.jpg" alt=""></div>
+      <div><img src="img/5.jpg" alt=""></div>
+      <div><img src="img/6.jpg" alt=""></div>
+      <div><img src="img/7.jpg" alt=""></div>
+      <div><img src="img/8.jpg" alt=""></div>
+      <div><img src="img/9.jpg" alt=""></div>
+      <div><img src="img/10.jpg" alt=""></div>
+      <div><img src="img/11.jpg" alt=""></div>
+      <div><img src="img/12.jpg" alt=""></div>
+      <div><img src="img/13.jpg" alt=""></div>
+      <div><img src="img/14.jpg" alt=""></div>
+    </div>
   </div>
 
   <div class="container">
@@ -30,11 +48,15 @@
             <!-- Centered Content -->
     </div>
     <ul class="nav-list">
-        <li><a href="b3njamin.net/portfolio" onclick="do_click();" alt="Icon">Portfolio</a></li>
-        <li><a href="b3njamin.net/other" onclick="do_click();" alt="Icon">Other</a></li>
-        <li><a target="_blank" href="http://b3njaminphotography.tumblr.com/" alt="Icon">Blog</a></li>
-        <li><a target="_blank" href="http://instagram.com/b3njamin" alt="Icon">Instagram</a></li>
-        <li><a href="b3njamin.net/contact" onclick="do_click();">Contact</a></li>
+        <!-- <li><a href="b3njamin.net/portfolio" onclick="do_click();" alt="Icon">Portfolio</a></li> -->
+        <!-- <li><a href="b3njamin.net/other" onclick="do_click();" alt="Icon">Other</a></li> -->
+        <!-- <li><a target="_blank" href="http://b3njaminphotography.tumblr.com/" alt="Icon">Blog</a></li> -->
+        <li><a target="_blank" href="http://b3njamin.bigcartel.com/" alt="Icon">Buy Prints</a></li>
+        <!-- <li><a target="_blank" href="http://instagram.com/b3njamin" alt="Icon">Instagram</a></li> -->
+        <br>
+        <li>Contact:</li>
+        <li><a href="tel:1-972-971-7529">Call Me</a></li>
+        <!-- <li><a href="mailto:b3njaminphotography@gmail.com?Subject=I%20was%20on%20your%20site%20and%20I%20..." target="_blank">b3njaminphotography@gmail.com</li> -->
     </ul>
   </div>
 
@@ -42,8 +64,8 @@
     <footer>
       <nav>
         <div class = "back-next">
-          <a href="" id="back">BACK</a>
-          <a href="" id="next">NEXT</a>
+          <button id="back" onclick='mySwipe.prev()'>BACK</button>
+          <button id="next" onclick='mySwipe.next()'>NEXT</button>
         </div>
       </nav>
     </footer>
@@ -52,6 +74,7 @@
   <!--Application-->
   <script type="text/javascript" src="js/plugins.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script src="bower_components/swipejs/swipe.js"></script>
 </body>
 
 </html>
