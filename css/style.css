@@ -38,7 +38,7 @@ a {
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: .5em;
+  letter-spacing: .3em;
   line-height: 3em; }
 
 a:focus {
@@ -230,7 +230,8 @@ img {
     right: 0%;
     top: 0; }
     .container .nav-list.active li {
-      opacity: 1; }
+      opacity: 1;
+      color: rgba(223, 236, 230, 0.5); }
   .container .nav-list a {
     line-height: 4em;
     -webkit-transition: all 0.4s 0s ease-out;
@@ -253,7 +254,7 @@ img {
       overflow: hidden;
       right: -100%;
       text-align: center;
-      padding: 50% 25%; }
+      padding: 70% 25%; }
       .container .nav-list.active {
         right: 0%; }
       .container .nav-list a {
@@ -302,7 +303,7 @@ button {
   text-decoration: none;
   font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: .5em;
+  letter-spacing: .3em;
   line-height: 3em;
   background: none;
   border: 0;

@@ -147,7 +147,7 @@ a {
   text-decoration:none; 
   font-size: 1em; 
   text-transform: uppercase;
-  letter-spacing: .5em;
+  letter-spacing: .3em;
   line-height: 3em;
   // font-family: $headline-font;
 }
@@ -304,6 +304,7 @@ img {
       top: 0;
       li {
         opacity: 1;
+        color: $lightColor50;
       }
     }
     
@@ -324,7 +325,7 @@ img {
       overflow: hidden;
       right: -100%;
       text-align: center;
-      padding: 50% 25%;
+      padding: 70% 25%;
       // padding-left: 15%;
       
 
@@ -428,7 +429,7 @@ button {
   text-decoration:none; 
   font-size: 1em; 
   text-transform: uppercase;
-  letter-spacing: .5em;
+  letter-spacing: .3em;
   line-height: 3em;
   background: none;
   border: 0;
